@@ -8,7 +8,6 @@ vim.cmd("set number")
 
 vim.keymap.set("n", "<leader><Esc>", vim.cmd.Ex)
 
-
 vim.api.nvim_create_autocmd({ "VimLeave" }, {
     callback = function()
         vim.cmd('mksession! ~/.session.vim')
