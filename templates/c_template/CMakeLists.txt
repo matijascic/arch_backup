@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.30)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CMAKE_DEBUG_POSTFIX _d)
+
+set(PROJECT_NAME template)
+project(${PROJECT_NAME})
+
+set(INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include)
+set(SOURCE_DIR ${PROJECT_SOURCE_DIR}/src)
+include_directories(${INCLUDE_DIR})
+
+file(GLOB_RECURSE H_FILES ${INCLUDE_DIR}/*.h)
+file(GLOB_RECURSE C_FILES ${SOURCE_DIR}/*.c)
+
+add_executable(${PROJECT_NAME} ${H_FILES} ${C_FILES})
+set_target_properties(${PROJECT_NAME} PROPERTIES DEBUG_POSTFIX ${CMAKE_DEBUG_POSTFIX})
