@@ -4,7 +4,7 @@ TEMPLATES_BACKUP=${BACKUP_DIR}/templates
 SCRIPTS_BACKUP=${BACKUP_DIR}/scripts
 
 if [ $# -eq 0 ]; then
-    COMMIT_MSG="No arguments supplied"
+    COMMIT_MSG="auto commit"
 else
     COMMIT_MSG=$1
 fi
