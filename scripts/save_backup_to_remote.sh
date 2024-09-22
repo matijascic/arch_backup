@@ -11,3 +11,8 @@ cp -r ~/.bashrc ${CONFIGS_BACKUP}
 cp -r ~/templates/* ${TEMPLATES_BACKUP}
 
 cp -r ~/scripts/* ${SCRIPTS_BACKUP}
+
+cd ~/backup
+git add .
+git commit -m "auto save"
+git push
